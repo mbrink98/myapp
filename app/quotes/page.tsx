@@ -39,7 +39,7 @@ export default async function QuotesPage(){
 }    
 // 
 function Quote({quote}:QuoteProps){
-    const{id,content,author,created} = quote || {};
+    const{id,content,author} = quote || {};
     return(
         <Link href={`/quotes/${id}`}>
             <div>
