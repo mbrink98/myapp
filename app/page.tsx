@@ -1,6 +1,6 @@
 async function getQuoteOfTheDay(){    //er holt alle quotes vllt müsste man nur die eine holen, da die anzahl der quotes jedoch nicht einfach zu verfügung steht & die qutoe ids nicht sequential sidn bisher keine bessere lösung
   const res = await fetch(
-      `http://127.0.0.1:8090/api/collections/quotes/records/`,
+      `http://mbrink.uber.space/api/collections/quotes/records/`,
       {
           next:{revalidate: 10},
       }
