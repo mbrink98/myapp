@@ -14,7 +14,7 @@ interface QuoteType {
 
 
 async function getQuotes(){
-    const res = await fetch('mbrink.uber.space/api/collections/quotes/records?page=1&perPage=30',
+    const res = await fetch('http://mbrink.uber.space/api/collections/quotes/records?page=1&perPage=30',
         {cache: 'no-store'}
     );
 

@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const create = async(content: string, author: string, addedby: string) => { 
-    await fetch('mbrink.uber.space/api/collections/quotes/records',{
+    await fetch('http://mbrink.uber.space/api/collections/quotes/records',{
         method:'POST',
         headers:{
             'Content-Type':'application/json',

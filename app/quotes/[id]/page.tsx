@@ -7,7 +7,7 @@ interface ParamsType {
 
 async function getQuote(quoteId:string){
     const res = await fetch(
-        `mbrink.uber.space/api/collections/quotes/records/${quoteId}`,
+        `http://mbrink.uber.space/api/collections/quotes/records/${quoteId}`,
         {
             next:{revalidate: 10},
         }
