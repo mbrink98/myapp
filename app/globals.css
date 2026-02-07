@@ -55,6 +55,7 @@ nav a {
   display: flex;
   align-items: center;      /* vertical center */
   justify-content: center;  /* horizontal center */
+  
 }
 .centered-container {
   display: flex;
@@ -62,9 +63,16 @@ nav a {
   align-items: center;
   justify-content: center;
   /*min-height: 100vh; box hat ganzen avaiable space gefüllt*/
-  max-width: 600px;   /* key line */
+  max-width: 90ch;   /*800px key line */
   border: 2px solid black;
   padding: 2rem;
   gap: 4rem;
+  aspect-ratio: 3.5 / 2; 
   font-family: var(--font-geist-sans);
+}
+.quote-listitem{
+  border: 2px solid black;
+  padding-left: 2rem;  /* horizontal padding */
+  padding-right: 2rem; /* horizontal padding */
+  margin-bottom: 1rem; /* space between this and next item */
 }

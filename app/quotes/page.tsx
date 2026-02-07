@@ -42,7 +42,7 @@ function Quote({quote}:QuoteProps){
     const{id,content,author} = quote || {};
     return(
         <Link href={`/quotes/${id}`}>
-            <div>
+            <div className="quote-listitem">
                 <h5>{content}</h5>
                 <h3>{author}</h3>
         {/*}        <p>{created}</p> */}
