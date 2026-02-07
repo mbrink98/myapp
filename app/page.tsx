@@ -27,11 +27,12 @@ async function getQuoteOfTheDay(){    //er holt alle quotes vllt müsste man nur
 export default async function Home() {
   const quote = await getQuoteOfTheDay();
   return (
-    <div className="centered-container">
-      <h1> Quote of the Day:</h1>
-      <h2>&quot;{quote.content}&quot;</h2>
-      <h3>-{quote.author}</h3>
-      <p></p>
+    <div className="page">
+      <div className="centered-container">
+        <h1> Quote of the Day:</h1>
+        <h2>&quot;{quote.content}&quot;</h2>
+        <h3>-{quote.author}</h3>
+      </div>
     </div>
   );
 }
