@@ -45,4 +45,4 @@ LICENSE.md
 # PocketBase / SQLite
 pb_data/*.db-shm
 pb_data/*.db-wal
-
+pocketbase.log
