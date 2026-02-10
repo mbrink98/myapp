@@ -6,8 +6,19 @@ interface QuoteType {
       content: string;
       author:string;
       created: string;
+      authorpic:string;
+      expand?: {
+        authorpic?: PictureType;
+  };
    
   }
+interface PictureType {
+  id: string;
+  image: string;
+  headshot: string;
+  collectionId: string;
+}
+
   interface QuoteProps {
     quote: QuoteType;
   }
@@ -17,7 +28,7 @@ async function getQuotes(){
     const res = await fetch('http://mbrink.uber.space/api/collections/quotes/records?page=1&perPage=30',
         {cache: 'no-store'}
     );
-
+    
      const data = await res.json();
     return data?.items as QuoteType[];
 }
@@ -39,12 +50,30 @@ export default async function QuotesPage(){
 }    
 // 
 function Quote({quote}:QuoteProps){
-    const{id,content,author} = quote || {};
+    const{id,content,author,authorpic} = quote || {};
+    const pic = quote.expand?.authorpic;
+    const imageUrl = pic
+    ? `http://mbrink.uber.space/api/files/pictures/${pic.id}/${pic.headshot}`
+    : null;
+    console.log("asdasd");
+    console.log("Drini: ",quote );
+    console.log('Pic', pic);
+
+
+
     return(
         <Link href={`/quotes/${id}`}>
             <div className="quote-listitem">
+                    {imageUrl && (
+            <img
+                src={imageUrl}
+                alt={`Portrait von ${quote.author}`}
+                 className="author-pic"
+                 loading="lazy"
+                 />
+                      )}
                 <h5>{content}</h5>
-                <h3>{author}</h3>
+                <h3>{authorpic}{author}</h3>
         {/*}        <p>{created}</p> */}
             </div>
         </Link>
