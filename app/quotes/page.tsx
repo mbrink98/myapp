@@ -57,7 +57,7 @@ function Quote({quote}:QuoteProps){
     : null;
     //console.log("asdasd");
     //console.log("Drini: ",quote );
-    console.log('Pic', pic);
+    //console.log('Pic', pic);
 
 
 
