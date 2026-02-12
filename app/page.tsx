@@ -14,7 +14,7 @@ async function getQuoteOfTheDay(){    //er holt alle quotes vllt müsste man nur
   const quotes = data.items; // Array of quotes
   const today = new Date().toISOString().split('T')[0].replace(/-/g, ''); // Example: '20241209'
   let hash = 0;
-  console.log("today.length = " + today.length)
+ // console.log("today.length = " + today.length)
   for (let i = 0; i < today.length; i++) {
     hash = (hash * 31 + today.charCodeAt(i)); // 31 is a prime number to spread values
     console.log("hash: "+hash);
@@ -31,13 +31,27 @@ async function getQuoteOfTheDay(){    //er holt alle quotes vllt müsste man nur
 
 export default async function Home() {
   const quote = await getQuoteOfTheDay();
+  const pic = quote.expand?.authorpic;
+  const imageUrl = pic
+    ? `https://mbrink.uber.space/api/files/pictures/${pic.id}/${pic.headshot}`
+    : null;
   return (
     <div className="page">
       <div className="centered-container">
-        <h1> Quote of the Day:</h1>
+        <h1 className="qotd"> Quote of the Day:</h1>
         <h2 className="quote">&quot;{quote.content}&quot;</h2>
-        <h3>-{quote.author}</h3>
+        <div className="qotd-author-row">
+          {imageUrl && (
+            <img
+              src={imageUrl}
+              alt={`Portrait von ${quote.author}`}
+              className="author-pic"
+              loading="lazy"
+            />
+          )}
+          <h3 className="author-name">{quote.author}</h3>
       </div>
+    </div>
     </div>
   );
 }

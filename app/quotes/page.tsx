@@ -25,7 +25,7 @@ interface PictureType {
 
 
 async function getQuotes(){
-    const res = await fetch('http://mbrink.uber.space/api/collections/quotes/records?page=1&perPage=30',
+    const res = await fetch(  "https://mbrink.uber.space/api/collections/quotes/records?expand=authorpic",
         {cache: 'no-store'}
     );
     
@@ -50,30 +50,34 @@ export default async function QuotesPage(){
 }    
 // 
 function Quote({quote}:QuoteProps){
-    const{id,content,author,authorpic} = quote || {};
+    const{id,content,author} = quote || {};
     const pic = quote.expand?.authorpic;
     const imageUrl = pic
-    ? `http://mbrink.uber.space/api/files/pictures/${pic.id}/${pic.headshot}`
+    ? `https://mbrink.uber.space/api/files/pictures/${pic.id}/${pic.headshot}`
     : null;
-    console.log("asdasd");
-    console.log("Drini: ",quote );
+    //console.log("asdasd");
+    //console.log("Drini: ",quote );
     console.log('Pic', pic);
+
 
 
 
     return(
         <Link href={`/quotes/${id}`}>
             <div className="quote-listitem">
-                    {imageUrl && (
-            <img
-                src={imageUrl}
-                alt={`Portrait von ${quote.author}`}
-                 className="author-pic"
-                 loading="lazy"
-                 />
-                      )}
-                <h5>{content}</h5>
-                <h3>{authorpic}{author}</h3>
+                   
+                <h5 className="quote-text">{content}</h5>
+                <div className="author-row">
+                 {imageUrl && (
+          <img
+           src={imageUrl}
+               alt={`Portrait von ${author}`}
+                className="author-pic"
+            loading="lazy"
+              />
+              )}
+         <h3>{author}</h3>
+         </div>
         {/*}        <p>{created}</p> */}
             </div>
         </Link>

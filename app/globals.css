@@ -73,20 +73,99 @@ nav a {
   font-family: var(--font-geist-sans);
 
 }
+/*
 .quote-listitem{
   border: 2px solid black;
-  padding-left: 2rem;  /* horizontal padding */
-  padding-right: 2rem; /* horizontal padding */
-  margin-bottom: 1rem; /* space between this and next item */
-  border-radius: 10px; /* rounds all corners equally */
-  /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* x-offset, y-offset, blur, color */
+  padding-left: 2rem;  /* horizontal padding 
+  padding-right: 2rem; /* horizontal padding 
+  margin-bottom: 1rem; /* space between this and next item 
+  border-radius: 10px; /* rounds all corners equally 
+  /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* x-offset, y-offset, blur, color */ /*
 }
+
 .author-pic {
   width: 48px;
   height: 48px;
   object-fit: cover;
   border-radius: 50%;
 }
+  /*
+.author-pic {
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
+  border-radius: 50%;
+}*//*
+
+.author-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author-pic {
+  height: 2rem;
+  width: 2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}*/
+/* Container der Quote-Box */
+
 .quote{
-  padding: 6px;
+  padding: 6px 8rem;
+}
+
+.qotd{
+  margin-right: 55%;
+
+}
+
+.qotd-author-row{
+ display: flex;
+  align-items: center;       /* Bild vertikal zentriert mit Text */
+  gap: 0.75rem;     
+  margin-left: 60%;   /* drückt den Text nach rechts */
+
+}
+
+
+.quote-listitem {
+  background-color: #ffffff;        /* weiße Box */
+  border: 2px solid black;          /* sichtbarer Rahmen */
+  border-radius: 10px;              /* abgerundete Ecken */
+  padding: 1.5rem 2rem;             /* innen Luft */
+  margin-bottom: 1.5rem;            /* Abstand zwischen Boxen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* leichter Schatten */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;                        /* Abstand zwischen Quote und Autorzeile */
+}
+
+/* Quote-Text */
+.quote-text {
+  margin: 0;
+  font-size: 1.1rem;  /* vorher: 1.1rem, jetzt wieder größer */
+  line-height: 1.6;   /* etwas mehr Zeilenhöhe für Lesbarkeit */
+}
+
+/* Autor-Zeile */
+.author-row {
+  display: flex;
+  align-items: center;       /* Bild vertikal zentriert mit Text */
+  gap: 0.75rem;              /* Abstand zwischen Bild und Name */
+}
+
+/* Autor-Bild */
+.author-pic {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;         /* Bild füllt Container, keine Verzerrung */
+  border-radius: 50%;        /* rund */
+  flex-shrink: 0;            /* Bild schrumpft nicht */
+}
+
+/* Autor-Name */
+.author-name {
+  margin: 0;
+  font-size: 1.2rem;
 }
