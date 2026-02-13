@@ -144,6 +144,22 @@ nav a {
    justify-content: flex-end;
    padding-right: 2rem;
 }
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*min-height: 100vh; box hat ganzen avaiable space gefüllt*/
+  max-width: 90ch;   /*800px key line */
+  border: 2px solid black;
+  border-radius: 10px; /* rounds all corners equally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* x-offset, y-offset, blur, color */
+  padding: 0.2rem;
+  gap: 1.2rem;
+  aspect-ratio: 3.5 / 2; 
+  font-family: var(--font-geist-sans);
+
+}
 }
 
 .quote-listitem {
