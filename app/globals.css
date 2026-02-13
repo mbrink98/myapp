@@ -129,8 +129,12 @@ nav a {
 }
 
 @media (max-width: 600px) {
+  .qotd{
+  margin-right: 55%;
+  padding: 0.2rem;
+}
   .quote {
-    padding: 0.5rem 1rem;          /* kleineres Padding auf Handys */
+    padding: 0.2rem 0.8rem;          /* kleineres Padding auf Handys */
     font-size: 1.2rem;
   }
   .qotd-author-row{
