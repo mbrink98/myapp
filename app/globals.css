@@ -137,6 +137,7 @@ nav a {
   .qotd-author-row {
     justify-content: center;        /* mittig auf Mobile */
     white-space: nowrap;
+    width: fit-content;
   }
 }
 
