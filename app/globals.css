@@ -133,13 +133,12 @@ nav a {
     padding: 0.5rem 1rem;          /* kleineres Padding auf Handys */
     font-size: 1.2rem;
   }
-
-  .qotd-author-row {
-    justify-content: center;        /* mittig auf Mobile */
-    white-space: nowrap;
-    width: fit-content;
-    padding: 0rem 1rem;
-  }
+  .qotd-author-row{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+   justify-content: flex-end;
+}
 }
 
 .quote-listitem {
