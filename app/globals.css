@@ -143,6 +143,7 @@ nav a {
     gap: 0.75rem;
    justify-content: flex-end;
    padding-right: 2rem;
+   padding-bottom: 2rem;
 }
 .centered-container {
   display: flex;
