@@ -131,7 +131,7 @@ nav a {
 @media (max-width: 600px) {
   .qotd{
   margin-right: 55%;
-  padding: 0.2rem;
+  padding: 0.3rem;
 }
   .quote {
     padding: 0.2rem 0.8rem;          /* kleineres Padding auf Handys */
@@ -142,7 +142,7 @@ nav a {
     align-items: center;
     gap: 0.75rem;
    justify-content: flex-end;
-   padding-right: 2rem;
+   padding-right: 2.6rem;
    padding-bottom: 1.2rem;
 }
 .centered-container {
