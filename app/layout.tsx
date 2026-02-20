@@ -29,13 +29,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Link href="/">
+        <Link className="divider" href="/">
               Home
             </Link>
         
-            <Link href="/quotes">
+        <Link className="divider" href="/quotes">
               Quotes
               </Link>
+
+        <Link className="divider" href="/quote-suggestion">
+              Suggest a Quote!
+              </Link>      
         {children}
       </body>
     </html>
