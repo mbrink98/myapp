@@ -161,6 +161,9 @@ nav a {
   font-family: var(--font-geist-sans);
 
 }
+.divider{
+  padding: 1rem;
+}
 }
 
 .quote-listitem {
