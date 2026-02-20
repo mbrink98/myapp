@@ -71,7 +71,7 @@ nav a {
   gap: 4rem;
   aspect-ratio: 3.5 / 2; 
   font-family: var(--font-geist-sans);
-
+  background-color: #f0f0f0;
 }
 /*
 .quote-listitem{
@@ -176,6 +176,7 @@ nav a {
   display: flex;
   flex-direction: column;
   gap: 1rem;                        /* Abstand zwischen Quote und Autorzeile */
+  background-color: #f0f0f0;
 }
 
 /* Quote-Text */
