@@ -8,17 +8,17 @@ async function getQuoteOfTheDay(){    //er holt alle quotes vllt müsste man nur
 
 
   const data = await res.json();
-  console.log(data.items[0]);
-  console.log(data.items[0].expand); // Sollte authorpic enthalten
+  //console.log(data.items[0]);
+ // console.log(data.items[0].expand); // Sollte authorpic enthalten
 
   const quotes = data.items; // Array of quotes
   const today = new Date().toISOString().split('T')[0].replace(/-/g, ''); // Example: '20241209'
   let hash = 0;
  // console.log("today.length = " + today.length)
-  for (let i = 0; i < today.length; i++) {
+  for (let i = 0; i < today.length; i++) {          // THAT IS NOT THE SAME FOR EVERYONE
     hash = (hash * 31 + today.charCodeAt(i)); // 31 is a prime number to spread values
-    console.log("hash: "+hash);
-    console.log(today.charCodeAt(i));
+    //console.log("hash: "+hash);
+    //console.log(today.charCodeAt(i));         
   }
   const randomIndex = Math.abs(hash) % quotes.length;
 /* console.log("quotes.length = "+ quotes.length);
